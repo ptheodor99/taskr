@@ -1,0 +1,16 @@
+services:
+  taskr:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      SQLITE_DB_PATH: /app/backend/data/app.db
+      FRONTEND_DIST_PATH: /app/frontend/dist
+    volumes:
+      - taskr-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  taskr-data:

@@ -1,0 +1,27 @@
+{
+  "name": "@taskr/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:init": "node scripts/initDb.js",
+    "db:seed": "node scripts/seedDb.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "better-sqlite3": "9.6.0",
+    "compression": "1.8.1",
+    "cors": "2.8.6",
+    "dotenv": "17.4.2",
+    "express": "4.22.1",
+    "helmet": "8.1.0",
+    "morgan": "1.10.1"
+  },
+  "devDependencies": {
+    "supertest": "7.2.2",
+    "vitest": "1.6.1"
+  }
+}
